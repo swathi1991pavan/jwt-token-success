@@ -44,11 +44,13 @@ public class EmployeeController {
     } 
 	
 	@PostMapping
+	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
 	public Employee addEmployee(@Valid @RequestBody Employee employee) {
 		return employeeService.addEmployee(employee);
 	}
 	
 	@PutMapping("{employeeId}")
+	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
 	public Employee updateEmployee(@PathVariable("employeeId")  int employeeId , @RequestBody Employee employee) {
 		return employeeService.updateEmployee(employeeId, employee);
 	}

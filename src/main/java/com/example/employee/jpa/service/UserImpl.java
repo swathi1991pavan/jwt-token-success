@@ -10,6 +10,7 @@ import org.springframework.web.client.RestTemplate;
 import com.example.employee.jpa.dto.ResponseDto;
 import com.example.employee.jpa.dto.UserDto;
 import com.example.employee.jpa.model.Employee;
+import com.example.employee.jpa.repository.UserInfoJpaRepository;
 import com.example.employee.jpa.repository.UserJpaRepository;
 import com.example.employee.jpa.repository.UserRepository;
 

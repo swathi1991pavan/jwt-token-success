@@ -8,9 +8,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import com.example.employee.jpa.model.UserInfo;
 import com.example.employee.jpa.service.EmployeeJpaService;
 
-public interface UserInfoJpaRepository extends JpaRepository<UserDetails, Integer>{
-	Optional<UserInfo> findByName(String username);
-
+public interface UserInfoJpaRepository extends JpaRepository<UserInfo, Integer>{
 	
+	Optional<UserInfo> findByName(String username); 
 	
 }
